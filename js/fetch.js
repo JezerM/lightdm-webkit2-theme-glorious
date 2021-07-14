@@ -3,6 +3,6 @@ const fetchFile = (url) => new Promise((resolve) => {
 	req.addEventListener("load", function () {
 		resolve(this.response);
 	});
-	req.open("GET", url);
+	req.open("GET", window.location.href + url);
 	req.send();
 });
